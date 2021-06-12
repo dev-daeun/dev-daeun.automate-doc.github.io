@@ -17,3 +17,21 @@ jobs:
         workflow_conclusion: success
         name: openapi-doc
         repo: dev-daeun/openapi-to-markdown
+
+    - name: Add & Commit to main
+    - uses: EndBug/add-and-commit@v7
+      with:
+        # TODO: repository_dispatch 이벤트의 payload에 있는 문서이름으로 수정
+        add: 'doc.md'
+
+        # TODO: 이벤트 일으킨 리퍼지토리 이름으로 수정 (repository_dispatch 이벤트의 payload 사용)
+        author_name: 'DaEun Kim'
+        author_email: dev-daeun@gmail.com
+        branch: main
+
+        default_author: github_actor
+
+        # TODO: repository_dispatch 이벤트의 payload에 있는 커밋메세지로 수정
+        message: 'Your commit message'
+
+        pull_strategy: 'NO-PULL'
