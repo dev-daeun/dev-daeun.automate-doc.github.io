@@ -19,7 +19,7 @@ jobs:
         repo: dev-daeun/openapi-to-markdown
 
     - name: Add & Commit to main
-    - uses: EndBug/add-and-commit@v7
+      uses: EndBug/add-and-commit@v7
       with:
         # TODO: repository_dispatch 이벤트의 payload에 있는 문서이름으로 수정
         add: 'doc.md'
