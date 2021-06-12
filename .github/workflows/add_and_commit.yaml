@@ -12,7 +12,7 @@ jobs:
     - name: Download markdown file
       uses: dawidd6/action-download-artifact@v2
       with:
-        github_token: ${{secrets.GITHUB_TOKEN}}
+        github_token: ${{secrets.ACTION_ACCESS_TOKEN}}
         workflow_conclusion: success
         name: openapi-doc
         repo: dev-daeun/openapi-to-markdown
