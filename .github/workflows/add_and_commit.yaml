@@ -1,5 +1,7 @@
 name: GitHub Actions
-on: [repository_dispatch]
+on:
+  repository_dispatch:
+    types: [file-uploaded]
 
 jobs:
   build:
